@@ -1,4 +1,3 @@
-
 [Culture](./culture.md)
 
 [Team](./team.md)

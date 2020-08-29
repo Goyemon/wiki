@@ -5,6 +5,7 @@
 ## Ideas & Tasks
 
 [Notion](notion://www.notion.so/notion.so)
+
 [GitHub Issues](https://github.com/Goyemon)
 
 ## Customer Success
@@ -20,7 +21,9 @@ Here :)
 [Twitter](https://twitter.com/GoyemonOfficial)
 
 [Medium](https://medium.com/goyemon)
+
 YouTube
+
 MailChimp
 
 ## Design
@@ -40,4 +43,3 @@ Dropbox
 ## Slides
 
 Dropbox
-
