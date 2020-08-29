@@ -32,7 +32,7 @@ Invision Studio
 
 Invision
 
-Pinterest
+[Pinterest](https://pin.it/19clmLh)
 
 Dropbox
 
