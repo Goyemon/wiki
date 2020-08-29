@@ -1,6 +1,6 @@
-## Our Vision 👀
+## Our Vision
 
-To fix the brokenness of the financial industry.
+Fix the brokenness of the financial industry.
 
 ## Our Mantra
 
