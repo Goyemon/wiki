@@ -1,1 +1,1 @@
-[How We Get Things Done](./how-we-get-things-done.md)
+- [How We Get Things Done](./how-we-get-things-done.md)

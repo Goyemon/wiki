@@ -1,9 +1,9 @@
-[Culture](./culture.md)
+- [Culture](./culture.md)
 
-[Team](./team.md)
+- [Team](./team.md)
 
-[Design](./design.md)
+- [Design](./design.md)
 
-[Engineering](./engineering.md)
+- [Engineering](./engineering.md)
 
-[Tools](./tools.md)
+- [Tools](./tools.md)

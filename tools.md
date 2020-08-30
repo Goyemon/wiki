@@ -1,16 +1,16 @@
 ## Team Communication
 
-[Discord](https://discord.gg/MXGfnJG)
+- [Discord](https://discord.gg/MXGfnJG)
 
 ## Ideas & Tasks
 
-[Notion](notion://www.notion.so/notion.so)
+- [Notion](notion://www.notion.so/notion.so)
 
-[GitHub Issues](https://github.com/Goyemon)
+- [GitHub Issues](https://github.com/Goyemon)
 
 ## Customer Success
 
-[Discord](https://discord.gg/MXGfnJG)
+- [Discord](https://discord.gg/MXGfnJG)
 
 ## Wiki
 
@@ -18,28 +18,28 @@ Here :)
 
 ## Sales & Marketing
 
-[Twitter](https://twitter.com/GoyemonOfficial)
+- [Twitter](https://twitter.com/GoyemonOfficial)
 
-[Medium](https://medium.com/goyemon)
+- [Medium](https://medium.com/goyemon)
 
-YouTube
+- YouTube
 
-MailChimp
+- MailChimp
 
 ## Design
 
-Invision Studio
+- Invision Studio
 
-Invision
+- Invision
 
-[Pinterest](https://pin.it/19clmLh)
+- [Pinterest](https://pin.it/19clmLh)
 
-Dropbox
+- Dropbox
 
 ## Legal
 
-Dropbox
+- Dropbox
 
 ## Slides
 
-Dropbox
+- Dropbox

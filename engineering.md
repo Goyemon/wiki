@@ -1,1 +1,1 @@
-[Wallet Release Process](./wallet-release-process.md)
+- [Wallet Release Process](./wallet-release-process.md)
