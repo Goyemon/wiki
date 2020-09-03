@@ -115,8 +115,10 @@ GET
       "1598271743", // timestamp
       2, // state. 2 is included. 3 is confirmed.
       {
-        "cdai": {
+        "compound_dai": {
+          // contract name
           "mint": [
+            // event name
             [
               "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
               "2bdd586116b52b0000",
@@ -130,6 +132,33 @@ GET
   }
 }
 ```
+
+## a list of a contract name and event name
+
+### dai
+
+- approve
+- transfer
+
+### cdai
+
+- approve
+- transfer
+
+### pldai
+
+- approve
+- transfer
+
+### compound_dai
+
+- mint
+
+### pooltogether_v3_weekly_dai
+
+### uniswap_v2
+
+- swap
 
 <a id="txhistory"></a>
 
@@ -265,6 +294,7 @@ GET
       1
     ],
     "contracts": [
+      // a list of contracts an address is associated with
       "7a250d5630b4cf539739df2c5dacb4c659f2488d",
       "5d3a536e4d6dbd6114cc1ead35777bab948e3643"
     ]
