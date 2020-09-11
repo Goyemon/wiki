@@ -1,40 +1,68 @@
-# On-boarding
-- create mnemonic words
-- validate the created mnemonic words
-- import mnemonic words
-- wallet creation validation
+# On-Boarding
 
+- [ ] create mnemonic words
+- [ ] validate the created mnemonic words
+- [ ] import mnemonic words
+- [ ] wallet creation validation
 
 # Portfolio
-- delete a wallet
+
+- [ ] delete a wallet
 
 # Send
-## Ether Transfer
-- [ ] Eth Outgoing
-- [ ] Dai Outgoing
-- [ ] cDai Outgoing
-- [ ] plDai Outgoing
-- [ ] Eth Incoming
-- [ ] Dai Incoming
-- [ ] cDai Incoming
-- [ ] plDai Incoming
 
-## Other
-- [ ] Contract Interaction
-- [ ] Contract Creation
+- [ ] ETH Outgoing
+- [ ] DAI Outgoing
+- [ ] CDAI Outgoing
+- [ ] PLDAI Outgoing
 - [ ] Authorize
+- [ ] ETH Incoming
+- [ ] DAI Incoming
+- [ ] CDAI Incoming
+- [ ] PLDAI Incoming
 
 # Earn
-## Compound
-- [ ] Compound Withdraw
-- [ ] Compound Deposit
 
-## Pooltogether
-- [ ] Pooltogether Deposit
-- [ ] Pooltogether Withdraw
+## Compound
+
+- [ ] Authorize
+- [ ] Compound Deposit
+- [ ] Compound Withdraw
+
+## PoolTogether
+
+- [ ] Authorize
+- [ ] PoolTogether Deposit
+- [ ] PoolTogether Withdraw
 
 # Swap
+
 ## Uniswap
-- [ ] Uniswap
+
+- [ ] ETH to DAI
 
 # History
+
+## Transaction Replacement
+
+- [ ] replace a pending tx
+
+## History View & Transaction Detail Modal
+
+- [ ] Failed
+- [ ] Authorize
+- [ ] ETH Outgoing
+- [ ] DAI Outgoing
+- [ ] CDAI Outgoing
+- [ ] PLDAI Outgoing
+- [ ] ETH Incoming
+- [ ] DAI Incoming
+- [ ] CDAI Incoming
+- [ ] PLDAI Incoming
+- [ ] Compound Deposit
+- [ ] Compound Withdraw
+- [ ] PoolTogether Deposit
+- [ ] PoolTogether Withdraw
+- [ ] ETH to DAI Swap
+- [ ] Contract Interaction
+- [ ] Contract Creation
