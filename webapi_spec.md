@@ -1,9 +1,8 @@
 # type
 
 - [register_address](#register_address)
-- [balance](#balance)
 - [outgoing_tx](#outgoing_tx)
-- [txstate](#txstate)
+- [balance](#balance)
 - [txhistory](#txhistory)
 - [protocol_stats](#protocol_stats)
 
@@ -27,6 +26,40 @@ POST
 };
 ```
 
+<a id="outgoing_tx"></a>
+
+# outgoing_tx
+
+## method
+
+POST
+
+## format
+
+```json
+{
+  "type": "outgoing_tx",
+  "signed_tx": "0xf8890485147d35700083062cc7945d3a536e4d6dbd6114cc1ead35777bab948e364380a4a0712d6800000000000000000000000000000000000000000000002bdd586116b52b000026a01c125c2cb31d38ae8300d3d3434c7a2ef842a172fa6b3cce0e4f2b9e20dfa261a00e9dc555d73d9c308891806cfa428e4694a7a3fa138845284437275dc94ad53c",
+  "nonce": "4"
+}
+```
+
+## response
+
+_\*only when there is the geth error_
+
+```json
+{
+  "id": "1598836349170",
+  "type": "transactionError",
+  "error": {
+    "code": -32000,
+    "message": "replacement transaction underpriced"
+  },
+  "nonce": "5"
+}
+```
+
 <a id="balance"></a>
 
 # balance
@@ -48,42 +81,9 @@ GET
 }
 ```
 
-<a id="outgoing_tx"></a>
+<a id="txhistory"></a>
 
-# outgoing_tx
-
-## method
-
-POST
-
-## format
-
-```json
-{
-  "type": "outgoing_tx",
-  "signed_tx": "0xf8890485147d35700083062cc7945d3a536e4d6dbd6114cc1ead35777bab948e364380a4a0712d6800000000000000000000000000000000000000000000002bdd586116b52b000026a01c125c2cb31d38ae8300d3d3434c7a2ef842a172fa6b3cce0e4f2b9e20dfa261a00e9dc555d73d9c308891806cfa428e4694a7a3fa138845284437275dc94ad53c",
-  "nonce": "4"
-}
-```
-
-## response
-_*only when there is the geth error_
-
-```json
-{
-  "id": "1598836349170",
-  "type": "transactionError",
-  "error": {
-    "code": -32000,
-    "message": "replacement transaction underpriced"
-  },
-  "nonce": "5"
-}
-```
-
-<a id="txstate"></a>
-
-# txstate
+# txhistory
 
 ## method
 
@@ -93,35 +93,85 @@ GET
 
 ```json
 {
-  "id": "1598271744680",
-  "type": "txstate",
-  "tx": {
-    "d76f64ed3d4a4c9790da678b6255d8d6819e7f73e51fc797915a22ba3f2090b1": [
-      // tx hash
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69", // from address
-      "5d3a536e4d6dbd6114cc1ead35777bab948e3643", // to address
-      "051f6b", // gas limit or gas used in hex
-      "147d357000", // gas price in hex wei
-      "00", // value in hex wei
-      4, // nonce
-      "1598271743", // timestamp
-      2, // state. 2 is included. 3 is confirmed.
-      {
-        "compound_dai": {
-          // contract name
-          "mint": [
-            // event name
-            [
-              "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-              "2bdd586116b52b0000",
-              "039235b6b0cd"
-            ]
-          ]
-        }
+  "id": "4598272544408",
+  "type": "txhistory",
+  "Txes": [
+    {
+      "Object": {
+        "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+        "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+        "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+        "Nonce": 5,
+        "GasPrice": 102000000000,
+        "GasLimit": 743061,
+        "GasUsed": 615586,
+        "Value": 0,
+        "Timestamp": 1596433159
       },
-      1
-    ]
-  }
+      "Status": "Pending",
+      "Events": [
+        {
+          "Contract": "Dai",
+          "Action": "Transfer",
+          "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+          "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+          "Value": 1000000000000000000
+        }
+      ]
+    },
+    {
+      "Object": {
+        "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+        "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+        "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+        "Nonce": 5,
+        "GasPrice": 102000000000,
+        "GasLimit": 743061,
+        "GasUsed": 615586,
+        "Value": 0,
+        "Timestamp": 1596433159
+      },
+      "Status": "Included",
+      "Events": [
+        {
+          "Contract": "Dai",
+          "Action": "Approve",
+          "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
+          "To": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
+          "Value": 1000000000000000000
+        }
+      ]
+    },
+
+    {
+      "Object": {
+        "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+        "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+        "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+        "Nonce": 5,
+        "GasPrice": 102000000000,
+        "GasLimit": 743061,
+        "GasUsed": 615586,
+        "Value": 0,
+        "Timestamp": 1596433159
+      },
+      "Status": "Included",
+      "Events": [
+        {
+          "Contract": "UniswapV2",
+          "Action": "Swap",
+          "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
+          "To": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
+          "Value": 1000000000000000000
+        }
+      ]
+    }
+  ],
+  "contracts": [
+    // a list of contracts an address is associated with
+    "7a250d5630b4cf539739df2c5dacb4c659f2488d",
+    "5d3a536e4d6dbd6114cc1ead35777bab948e3643"
+  ]
 }
 ```
 
@@ -151,148 +201,6 @@ GET
 ### uniswap_v2
 
 - swap
-
-<a id="txhistory"></a>
-
-# txhistory
-
-## method
-
-GET
-
-## format
-
-```json
-{
-  "id": "4598272544408",
-  "type": "txhistory",
-  "txes": {
-    "11a6a52a3eef386105a9445987c06c0654b0ce12b033a745401abbedc94575b7": [
-      "9c19b0497997fe9e75862688a295168070456951",
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-      "5208",
-      "10e74c1600",
-      "011c37937e080000",
-      "61955",
-      1596355220,
-      3,
-      {},
-      1
-    ],
-    "98558a490cead5385cd773b2ac2dc8a96eea05f904cee05a084d1aee69930ed5": [
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-      "6b175474e89094c44da98b954eedeac495271d0f",
-      "ad46",
-      "0f9982de00",
-      "00",
-      "1",
-      1596356920,
-      3,
-      {
-        "dai": {
-          "appr": [
-            [
-              "5d3a536e4d6dbd6114cc1ead35777bab948e3643",
-              "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-              "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-            ]
-          ]
-        }
-      },
-      1
-    ],
-    "9c99489a88d1d95d2b707fb5e3d6b136859ad49689fab4603b8ee66121f3c8b8": [
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-      "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-      "01e972",
-      "0f9982de00",
-      "02d07041ffe42800",
-      "0",
-      1596356832,
-      3,
-      {
-        "uniswap2ethdai": {
-          "U2swap": [
-            [
-              "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-              "00",
-              "02d07041ffe42800",
-              "041ef64b939afcbb76",
-              "00",
-              "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69"
-            ]
-          ]
-        }
-      },
-      1
-    ],
-    "a0ccafd057346a4d20eef3944eae950c09726cd8c367d133e4172f2b045ef619": [
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-      "5d3a536e4d6dbd6114cc1ead35777bab948e3643",
-      "05059f",
-      "0f9982de00",
-      "00",
-      "2",
-      1596356920,
-      3,
-      {
-        "cdai": {
-          "mint": [
-            [
-              "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-              "041ef6303d47a50000",
-              "56174a5176"
-            ]
-          ]
-        }
-      },
-      1
-    ],
-    "bdacafd91630bb2d3abad806523d9ed1054fe48e161266f34e940c0e4d408476": [
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-      "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-      "01aeda",
-      "0861c46800",
-      "1dcd1ffc1cbd9200",
-      "3",
-      1596433699,
-      3,
-      {
-        "uniswap2ethdai": {
-          "U2swap": [
-            [
-              "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-              "00",
-              "1dcd1ffc1cbd9200",
-              "2bdd5849feec3ed2b7",
-              "00",
-              "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69"
-            ]
-          ]
-        }
-      },
-      1
-    ],
-    "efdb6e7e6252347457611ee29e6a9b791bf841952298e3c72801727624974f6b": [
-      "e89943ec20d856f064a87349a00ef6ab00aed042",
-      "e9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-      "5208",
-      "10ff239a00",
-      "1dc984ded468dc00",
-      "190593",
-      1596433159,
-      3,
-      {},
-      1
-    ],
-    "contracts": [
-      // a list of contracts an address is associated with
-      "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-      "5d3a536e4d6dbd6114cc1ead35777bab948e3643"
-    ]
-  }
-}
-```
 
 <a id="protocol_stats"></a>
 
