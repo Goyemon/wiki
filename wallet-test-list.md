@@ -66,3 +66,9 @@
 - [ ] ETH to DAI Swap
 - [ ] Contract Interaction
 - [ ] Contract Creation
+
+## Transaction State Update
+
+- [ ] foreground
+- [ ] background
+- [ ] closed
