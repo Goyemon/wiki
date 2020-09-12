@@ -3,7 +3,6 @@
 - [register_address](#register_address)
 - [balance](#balance)
 - [outgoing_tx](#outgoing_tx)
-- [transaction_error](#transaction_error)
 - [txstate](#txstate)
 - [txhistory](#txhistory)
 - [protocol_stats](#protocol_stats)
@@ -67,15 +66,8 @@ POST
 }
 ```
 
-<a id="transaction_error"></a>
-
-# transaction_error
-
-## method
-
-GET
-
-## format
+## response
+_*only when there is the geth error_
 
 ```json
 {
