@@ -89,6 +89,101 @@ GET
 
 GET
 
+## transaction type
+
+- [ETHTransfer](#eth_transfer)
+- [TokenTransfer](#token_transfer)
+- [Compound](#compound)
+- [PoolTogether](#pool_together)
+- [Uniswap](#uniswap)
+
+<a id="eth_transfer"></a>
+
+### ETHTransfer
+
+#### format
+
+```json
+{
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0.34,
+    "Timestamp": 1596433159
+  },
+  "Status": "Pending"
+}
+```
+
+<a id="token_transfer"></a>
+
+### TokenTransfer
+
+- DAI transfer
+- CDAI transfer
+- PLDAI transfer
+
+#### format
+
+```json
+{
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0,
+    "Timestamp": 1596433159
+  },
+  "Status": "Pending",
+  "Events": [
+    {
+      "Contract": "DAI_token",
+      "Action": "Transfer",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Value": 1000000000000000000
+    }
+  ]
+}
+```
+
+<a id="compound"></a>
+
+### Compound
+
+- approve
+
+<a id="pool_together"></a>
+
+### PoolTogether
+
+- approve
+
+<a id="uniswap"></a>
+
+### Uniswap
+
+## a list of a contract name and event name
+
+### compound_dai
+
+- mint
+
+### pooltogether_v3_weekly_dai
+
+### uniswap_v2
+
+- swap
+
 ## format
 
 ```json
@@ -96,29 +191,6 @@ GET
   "id": "4598272544408",
   "type": "txhistory",
   "Txes": [
-    {
-      "Object": {
-        "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-        "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-        "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
-        "Nonce": 5,
-        "GasPrice": 102000000000,
-        "GasLimit": 743061,
-        "GasUsed": 615586,
-        "Value": 0,
-        "Timestamp": 1596433159
-      },
-      "Status": "Pending",
-      "Events": [
-        {
-          "Contract": "Dai",
-          "Action": "Transfer",
-          "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-          "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
-          "Value": 1000000000000000000
-        }
-      ]
-    },
     {
       "Object": {
         "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
@@ -174,33 +246,6 @@ GET
   ]
 }
 ```
-
-## a list of a contract name and event name
-
-### dai
-
-- approve
-- transfer
-
-### cdai
-
-- approve
-- transfer
-
-### pldai
-
-- approve
-- transfer
-
-### compound_dai
-
-- mint
-
-### pooltogether_v3_weekly_dai
-
-### uniswap_v2
-
-- swap
 
 <a id="protocol_stats"></a>
 
