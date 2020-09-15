@@ -1,50 +1,42 @@
 # type
 
-- [register_address](#register_address)
-- [outgoing_tx](#outgoing_tx)
-- [balance](#balance)
-- [txhistory](#txhistory)
-- [protocol_stats](#protocol_stats)
+1. [AddressRegistration](#address_registration)
+2. [OutgoingTransaction](#outgoing_transaction)
+3. [Balance](#balance)
+4. [TransactionHistory](#transaction_history)
+5. [ProtocolStats](#protocol_stats)
 
-<a id="register_address"></a>
+<a id="address_registration"></a>
 
-# register_address
+# 1. AddressRegistration
 
-## method
-
-POST
-
-## format
+## POST method
 
 ```json
 {
   "id": "1898272544408",
-    "type": "register_address",
-    "deviceTokenId": deviceTokenId,
-    "timestamp": timestamp,
-    "address": checksumAddress
+  "type": "address_registration",
+  "deviceId": "4598272544408",
+  "timestamp": 1595433159,
+  "address": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D"
 };
 ```
 
-<a id="outgoing_tx"></a>
+<a id="outgoing_transaction"></a>
 
-# outgoing_tx
+# 2. OutgoingTransaction
 
-## method
-
-POST
-
-## format
+## POST method
 
 ```json
 {
-  "type": "outgoing_tx",
+  "type": "outgoing_transaction",
   "signed_tx": "0xf8890485147d35700083062cc7945d3a536e4d6dbd6114cc1ead35777bab948e364380a4a0712d6800000000000000000000000000000000000000000000002bdd586116b52b000026a01c125c2cb31d38ae8300d3d3434c7a2ef842a172fa6b3cce0e4f2b9e20dfa261a00e9dc555d73d9c308891806cfa428e4694a7a3fa138845284437275dc94ad53c",
   "nonce": "4"
 }
 ```
 
-## response
+## Response
 
 _\*only when there is the geth error_
 
@@ -62,13 +54,9 @@ _\*only when there is the geth error_
 
 <a id="balance"></a>
 
-# balance
+# 3. Balance
 
-## method
-
-GET
-
-## format
+## GET method
 
 ```json
 {
@@ -81,27 +69,46 @@ GET
 }
 ```
 
-<a id="txhistory"></a>
+<a id="transaction_history"></a>
 
-# txhistory
+# 4. TransactionHistory
 
-## method
+## GET method
 
-GET
+```json
+{
+  "id": "4598272544408",
+  "type": "transaction_history",
+  "Txes": [{}, {}, {}],
+  "contracts": [
+    // a list of contracts an address is associated with
+    "7a250d5630b4cf539739df2c5dacb4c659f2488d",
+    "5d3a536e4d6dbd6114cc1ead35777bab948e3643"
+  ]
+}
+```
 
-## transaction type
+## Transaction Type
 
 - [ETHTransfer](#eth_transfer)
 - [TokenTransfer](#token_transfer)
-- [Compound](#compound)
-- [PoolTogether](#pool_together)
-- [Uniswap](#uniswap)
+  - [DAITransfer](#DAI_transfer)
+  - [CDAITransfer](#CDAI_transfer)
+  - [PLDAITransfer](#PLDAI_transfer)
+- [CompoundDAI](#compound_DAI)
+  - [Approve](#approve)
+  - [Mint](#mint)
+  - [redeemUnderlying](#redeem_underlying)
+- [PoolTogetherV2WeeklyDAI](#pool_together_v2_weekly_DAI)
+  - [Approve](#approve)
+  - [DepositPool](#deposit_pool)
+  - [Withdraw](#withdraw)
+- [UniswapV2](#uniswap_v2)
+  - [SwapExactETHForTokens](#swap_exact_ETH_for_tokens)
 
 <a id="eth_transfer"></a>
 
-### ETHTransfer
-
-#### format
+## ETHTransfer
 
 ```json
 {
@@ -122,13 +129,11 @@ GET
 
 <a id="token_transfer"></a>
 
-### TokenTransfer
+## TokenTransfer
 
-- DAI transfer
-- CDAI transfer
-- PLDAI transfer
+<a id="DAI_transfer"></a>
 
-#### format
+### DAITransfer
 
 ```json
 {
@@ -147,7 +152,7 @@ GET
   "Events": [
     {
       "Contract": "DAI_token",
-      "Action": "Transfer",
+      "Event": "Transfer",
       "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Value": 1000000000000000000
@@ -156,106 +161,189 @@ GET
 }
 ```
 
-<a id="compound"></a>
+<a id="CDAI_transfer"></a>
 
-### Compound
-
-- approve
-
-<a id="pool_together"></a>
-
-### PoolTogether
-
-- approve
-
-<a id="uniswap"></a>
-
-### Uniswap
-
-## a list of a contract name and event name
-
-### compound_dai
-
-- mint
-
-### pooltogether_v3_weekly_dai
-
-### uniswap_v2
-
-- swap
-
-## format
+### CDAITransfer
 
 ```json
 {
-  "id": "4598272544408",
-  "type": "txhistory",
-  "Txes": [
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0,
+    "Timestamp": 1596433159
+  },
+  "Status": "Pending",
+  "Events": [
     {
-      "Object": {
-        "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-        "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-        "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
-        "Nonce": 5,
-        "GasPrice": 102000000000,
-        "GasLimit": 743061,
-        "GasUsed": 615586,
-        "Value": 0,
-        "Timestamp": 1596433159
-      },
-      "Status": "Included",
-      "Events": [
-        {
-          "Contract": "Dai",
-          "Action": "Approve",
-          "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
-          "To": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-          "Value": 1000000000000000000
-        }
-      ]
-    },
-
-    {
-      "Object": {
-        "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-        "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-        "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
-        "Nonce": 5,
-        "GasPrice": 102000000000,
-        "GasLimit": 743061,
-        "GasUsed": 615586,
-        "Value": 0,
-        "Timestamp": 1596433159
-      },
-      "Status": "Included",
-      "Events": [
-        {
-          "Contract": "UniswapV2",
-          "Action": "Swap",
-          "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
-          "To": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
-          "Value": 1000000000000000000
-        }
-      ]
+      "Contract": "CDAI_token",
+      "Event": "Transfer",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Value": 1000000000000000000
     }
-  ],
-  "contracts": [
-    // a list of contracts an address is associated with
-    "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-    "5d3a536e4d6dbd6114cc1ead35777bab948e3643"
   ]
 }
 ```
 
+<a id="PLDAI_transfer"></a>
+
+### PLDAITransfer
+
+```json
+{
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0,
+    "Timestamp": 1596433159
+  },
+  "Status": "Pending",
+  "Events": [
+    {
+      "Contract": "PLDAI_token",
+      "Event": "Transfer",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Value": 1000000000000000000
+    }
+  ]
+}
+```
+
+<a id="compound_DAI"></a>
+
+## CompoundDAI
+
+<a id="approve"></a>
+
+### Approve
+
+```json
+{
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0,
+    "Timestamp": 1596433159
+  },
+  "Status": "Pending",
+  "Events": [
+    {
+      "Contract": "DAI_token",
+      "Event": "Approve",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Value": 1000000000000000000
+    }
+  ]
+}
+```
+
+<a id="mint"></a>
+
+### Mint
+
+<a id="redeem_underlying"></a>
+
+### redeemUnderlying
+
+<a id="pool_together_v2_weekly_DAI"></a>
+
+## PoolTogetherV2WeeklyDAI
+
+<a id="approve"></a>
+
+### Approve
+
+```json
+{
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0,
+    "Timestamp": 1596433159
+  },
+  "Status": "Pending",
+  "Events": [
+    {
+      "Contract": "DAI_token",
+      "Event": "Approve",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Value": 1000000000000000000
+    }
+  ]
+}
+```
+
+<a id="deposit_pool"></a>
+
+### DepositPool
+
+<a id="withdraw"></a>
+
+### Withdraw
+
+<a id="uniswap_v2"></a>
+
+## UniswapV2
+
+```json
+{
+  "Object": {
+    "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+    "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+    "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+    "Nonce": 5,
+    "GasPrice": 102000000000,
+    "GasLimit": 743061,
+    "GasUsed": 615586,
+    "Value": 0,
+    "Timestamp": 1596433159
+  },
+  "Status": "Included",
+  "Events": [
+    {
+      "Contract": "UniswapV2",
+      "Event": "Swap",
+      "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
+      "To": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
+      "Value": 1000000000000000000
+    }
+  ]
+}
+```
+
+<a id="swap_exact_ETH_for_tokens"></a>
+
+### SwapExactETHForTokens
+
 <a id="protocol_stats"></a>
 
-# protocol_stats
+# 5. ProtocolStats
 
-## method
-
-GET
-
-## format
+## GET method
 
 ```json
 {
@@ -264,13 +352,11 @@ GET
     "WETH_reserve": "23182c3558c93465acc77e",
     "DAI_reserve": "15551a05a83ee707125b"
   },
-
   "Compound_DAI_lending": {
     "lifetime_earned": "343691257544659324952969355138285373",
     "current_exchange_rate": "206114493664759872537853664",
     "yearly_interest_rate": "6138060200665175331936000"
   },
-
   "PoolTogether_V3_DAI_weekly": {
     "total_balance": "aaa588dc84c87367b6a3",
     "estimated_interest_rate": "025a9386c7a226",
