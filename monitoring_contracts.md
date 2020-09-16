@@ -26,6 +26,16 @@
 
 - Redeem
 
+## UniswapV2
+
+[0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D)
+
+[ABI](./ABI_ropsten_uniswapv2.json)
+
+### Events
+
+- Swap
+
 # Mainnet
 
 ## DAIToken
@@ -53,3 +63,13 @@
 - Mint
 
 - Redeem
+
+## UniswapV2
+
+[0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D](https://etherscan.io/address/0x7a250d5630b4cf539739df2c5dacb4c659f2488d)
+
+[ABI](./ABI_mainnet_uniswapv2.json)
+
+### Events
+
+- Swap
