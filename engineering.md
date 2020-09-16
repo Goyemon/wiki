@@ -3,3 +3,5 @@
 - [Wallet Test List](./wallet-test-list.md)
 
 - [Web API Spec](./webapi_spec.md)
+
+- [Monitoring Contracts](./monitoring_contracts.md)
