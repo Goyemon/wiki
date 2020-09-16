@@ -64,7 +64,7 @@
 - [ ] PoolTogether Withdraw
 - [ ] ETH to DAI Swap
 - [ ] Contract Interaction
-- [ ] Contract Creation
+- [ ] Deploy
 
 ## Transaction State Update
 
