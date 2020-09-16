@@ -8,6 +8,8 @@
 
 ### Events
 
+- Approve
+
 - Transfer
 
 ## CDAI
@@ -17,8 +19,6 @@
 [ABI](./ABI_ropsten_CDAI.json)
 
 ### Events
-
-- Approve
 
 - Transfer
 
@@ -46,6 +46,8 @@
 
 ### Events
 
+- Approve
+
 - Transfer
 
 ## CDAI
@@ -55,8 +57,6 @@
 [ABI](./ABI_mainnet_CDAI.json)
 
 ### Events
-
-- Approve
 
 - Transfer
 
