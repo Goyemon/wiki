@@ -15,7 +15,6 @@
 - [ ] DAI Outgoing
 - [ ] CDAI Outgoing
 - [ ] PLDAI Outgoing
-- [ ] Authorize
 - [ ] ETH Incoming
 - [ ] DAI Incoming
 - [ ] CDAI Incoming
