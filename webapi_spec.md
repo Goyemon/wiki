@@ -97,11 +97,11 @@ _\*only when there is the geth error_
   - [PLDAITransfer](#PLDAI_transfer)
 - [CompoundDAI](#compound_DAI)
   - [Approve](#approve)
-  - [Mint](#mint)
-  - [redeemUnderlying](#redeem_underlying)
+  - [Deposit](#deposit)
+  - [Withdraw](#withdraw)
 - [PoolTogetherV2WeeklyDAI](#pool_together_v2_weekly_DAI)
   - [Approve](#approve)
-  - [DepositPool](#deposit_pool)
+  - [Deposit](#deposit)
   - [Withdraw](#withdraw)
 - [UniswapV2](#uniswap_v2)
   - [SwapExactETHForTokens](#swap_exact_ETH_for_tokens)
@@ -148,7 +148,7 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "DAIToken",
-      "Event": "Transfer",
+      "Action": "Transfer",
       "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
@@ -176,7 +176,7 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "CDAIToken",
-      "Event": "Transfer",
+      "Action": "Transfer",
       "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
@@ -204,7 +204,7 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "PLDAIToken",
-      "Event": "Transfer",
+      "Action": "Transfer",
       "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
@@ -236,7 +236,7 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "DAI_token",
-      "Event": "Approve",
+      "Action": "Approve",
       "Owner": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Spender": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "Amount": 100
@@ -245,9 +245,9 @@ _\*only when there is the geth error_
 }
 ```
 
-<a id="mint"></a>
+<a id="deposit"></a>
 
-### Mint
+### Deposit
 
 ```json
 {
@@ -264,17 +264,24 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "CompoundDAI",
-      "Event": "Mint",
-      "Minter": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "MintAmount": 100
+      "Action": "Deposit",
+      "Depositor": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "Amount": 100
+    },
+    {
+      "Contract": "COMPToken",
+      "Action": "Transfer",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Amount": 132.4
     }
   ]
 }
 ```
 
-<a id="redeem_underlying"></a>
+<a id="withdraw"></a>
 
-### redeemUnderlying
+### Withdraw
 
 ```json
 {
@@ -291,9 +298,16 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "CompoundDAI",
-      "Event": "Redeem",
-      "Redeemer": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "RedeemAmount": 100
+      "Action": "Withdraw",
+      "Withdrawer": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "Amount": 100
+    },
+    {
+      "Contract": "COMPToken",
+      "Action": "Transfer",
+      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
+      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Amount": 132.4
     }
   ]
 }
@@ -322,7 +336,7 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "PoolTogetherV2WeeklyDAI",
-      "Event": "Approve",
+      "Action": "Approve",
       "Owner": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Spender": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "Amount": 100
@@ -331,9 +345,9 @@ _\*only when there is the geth error_
 }
 ```
 
-<a id="deposit_pool"></a>
+<a id="deposit  "></a>
 
-### DepositPool
+### Deposit
 
 ```json
 {
@@ -350,8 +364,8 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "PoolTogetherV2WeeklyDAI",
-      "Event": "Deposited",
-      "Sender": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Deposit",
+      "Depositor": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
     }
   ]
@@ -377,8 +391,8 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "PoolTogetherV2WeeklyDAI",
-      "Event": "Withdrawn",
-      "Sender": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Withdraw",
+      "Withdrawer": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
     }
   ]
@@ -408,7 +422,7 @@ _\*only when there is the geth error_
   "Events": [
     {
       "Contract": "UniswapV2",
-      "Event": "Swap",
+      "Action": "Swap",
       "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
       "ETHSold": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
       "TokenBought": 100
