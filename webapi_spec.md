@@ -123,13 +123,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "ETH",
-      "Action": "Send",
-      "Amount": 100
-    }
-  ]
+  "Contract": "ETH",
+  "Action": "Send",
+  "Amount": 100
 }
 ```
 
@@ -146,13 +142,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "DAIToken",
-      "Action": "Send",
-      "Amount": 100
-    }
-  ]
+  "Contract": "DAIToken",
+  "Action": "Send",
+  "Amount": 100
 }
 ```
 
@@ -169,13 +161,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "CDAIToken",
-      "Action": "Receive",
-      "Amount": 100
-    }
-  ]
+  "Contract": "CDAIToken",
+  "Action": "Receive",
+  "Amount": 100
 }
 ```
 
@@ -192,13 +180,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "PLDAIToken",
-      "Action": "Send",
-      "Amount": 100
-    }
-  ]
+  "Contract": "PLDAIToken",
+  "Action": "Send",
+  "Amount": 100
 }
 ```
 
@@ -219,13 +203,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "DAIToken",
-      "Action": "Approve",
-      "Amount": 100
-    }
-  ]
+  "Contract": "DAIToken",
+  "Action": "Approve",
+  "Amount": 100
 }
 ```
 
@@ -242,18 +222,24 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "CompoundDAI",
-      "Action": "Deposit",
-      "Amount": 100
-    },
-    {
-      "Contract": "COMPToken",
-      "Action": "Receive",
-      "Amount": 132.4
-    }
-  ]
+  "Contract": "CompoundDAI",
+  "Action": "Deposit",
+  "Amount": 100
+}
+```
+
+```json
+{
+  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+  "Nonce": 5,
+  "GasPrice": 102000000000,
+  "GasLimit": 743061,
+  "GasUsed": 615586,
+  "Timestamp": 1596433159,
+  "Status": "Waiting",
+  "Contract": "COMPToken",
+  "Action": "Receive",
+  "Amount": 132.4
 }
 ```
 
@@ -270,18 +256,24 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Success",
-  "Events": [
-    {
-      "Contract": "CompoundDAI",
-      "Action": "Withdraw",
-      "Amount": 100
-    },
-    {
-      "Contract": "COMPToken",
-      "Action": "Receive",
-      "Amount": 132.4
-    }
-  ]
+  "Contract": "CompoundDAI",
+  "Action": "Withdraw",
+  "Amount": 100
+}
+```
+
+```json
+{
+  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+  "Nonce": 5,
+  "GasPrice": 102000000000,
+  "GasLimit": 743061,
+  "GasUsed": 615586,
+  "Timestamp": 1596433159,
+  "Status": "Success",
+  "Contract": "COMPToken",
+  "Action": "Receive",
+  "Amount": 132.4
 }
 ```
 
@@ -302,13 +294,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "PoolTogetherV2WeeklyDAI",
-      "Action": "Approve",
-      "Amount": 100
-    }
-  ]
+  "Contract": "PoolTogetherV2WeeklyDAI",
+  "Action": "Approve",
+  "Amount": 100
 }
 ```
 
@@ -325,13 +313,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "PoolTogetherV2WeeklyDAI",
-      "Action": "Deposit",
-      "Amount": 100
-    }
-  ]
+  "Contract": "PoolTogetherV2WeeklyDAI",
+  "Action": "Deposit",
+  "Amount": 100
 }
 ```
 
@@ -348,13 +332,9 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Waiting",
-  "Events": [
-    {
-      "Contract": "PoolTogetherV2WeeklyDAI",
-      "Action": "Withdraw",
-      "Amount": 100
-    }
-  ]
+  "Contract": "PoolTogetherV2WeeklyDAI",
+  "Action": "Withdraw",
+  "Amount": 100
 }
 ```
 
@@ -375,14 +355,12 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Timestamp": 1596433159,
   "Status": "Success",
-  "Events": [
-    {
-      "Contract": "UniswapV2",
-      "Action": "Swap",
-      "ETHSold": 0.2,
-      "TokenBought": 100
-    }
-  ]
+  "Contract": "UniswapV2",
+  "Action": "Swap",
+  "TokenSold": "ETH",
+  "SoldAmount": 0.2,
+  "TokenBought": "DAI",
+  "BoughtAmount": 100
 }
 ```
 
