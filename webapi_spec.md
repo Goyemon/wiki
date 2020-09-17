@@ -121,7 +121,7 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0.34,
   "Timestamp": 1596433159,
-  "Status": "Pending"
+  "Status": "Waiting"
 }
 ```
 
@@ -144,13 +144,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "DAIToken",
-      "Action": "Transfer",
-      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Send",
       "Amount": 100
     }
   ]
@@ -172,13 +170,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "CDAIToken",
-      "Action": "Transfer",
-      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Receive",
       "Amount": 100
     }
   ]
@@ -200,13 +196,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "PLDAIToken",
-      "Action": "Transfer",
-      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Send",
       "Amount": 100
     }
   ]
@@ -232,13 +226,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "DAI_token",
       "Action": "Approve",
-      "Owner": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
-      "Spender": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "Amount": 100
     }
   ]
@@ -260,19 +252,16 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "CompoundDAI",
       "Action": "Deposit",
-      "Depositor": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "Amount": 100
     },
     {
       "Contract": "COMPToken",
-      "Action": "Transfer",
-      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Receive",
       "Amount": 132.4
     }
   ]
@@ -294,19 +283,16 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Success",
   "Events": [
     {
       "Contract": "CompoundDAI",
       "Action": "Withdraw",
-      "Withdrawer": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "Amount": 100
     },
     {
       "Contract": "COMPToken",
-      "Action": "Transfer",
-      "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-      "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
+      "Action": "Receive",
       "Amount": 132.4
     }
   ]
@@ -332,13 +318,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "PoolTogetherV2WeeklyDAI",
       "Action": "Approve",
-      "Owner": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
-      "Spender": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
       "Amount": 100
     }
   ]
@@ -360,12 +344,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "PoolTogetherV2WeeklyDAI",
       "Action": "Deposit",
-      "Depositor": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
     }
   ]
@@ -387,12 +370,11 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Pending",
+  "Status": "Waiting",
   "Events": [
     {
       "Contract": "PoolTogetherV2WeeklyDAI",
       "Action": "Withdraw",
-      "Withdrawer": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
       "Amount": 100
     }
   ]
@@ -418,13 +400,12 @@ _\*only when there is the geth error_
   "GasUsed": 615586,
   "Value": 0,
   "Timestamp": 1596433159,
-  "Status": "Included",
+  "Status": "Success",
   "Events": [
     {
       "Contract": "UniswapV2",
       "Action": "Swap",
-      "From": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
-      "ETHSold": "0xe9cd8cf5011f57a88e31cbaa7d2d1f3578958e69",
+      "ETHSold": 0.2,
       "TokenBought": 100
     }
   ]
