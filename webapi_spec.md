@@ -90,8 +90,8 @@ _\*only when there is the geth error_
 
 ## Transaction Type
 
-- [ETHTransfer](#eth_transfer)
-- [TokenTransfer](#token_transfer)
+- [Transfer](#transfer)
+  - [ETHTransfer](#eth_transfer)
   - [DAITransfer](#DAI_transfer)
   - [CDAITransfer](#CDAI_transfer)
   - [PLDAITransfer](#PLDAI_transfer)
@@ -106,28 +106,32 @@ _\*only when there is the geth error_
 - [UniswapV2](#uniswap_v2)
   - [SwapExactETHForTokens](#swap_exact_ETH_for_tokens)
 
+<a id="transfer"></a>
+
+## Transfer
+
 <a id="eth_transfer"></a>
 
-## ETHTransfer
+### ETHTransfer
 
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0.34,
   "Timestamp": 1596433159,
-  "Status": "Waiting"
+  "Status": "Waiting",
+  "Events": [
+    {
+      "Contract": "ETH",
+      "Action": "Send",
+      "Amount": 100
+    }
+  ]
 }
 ```
-
-<a id="token_transfer"></a>
-
-## TokenTransfer
 
 <a id="DAI_transfer"></a>
 
@@ -136,13 +140,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -162,13 +163,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -188,13 +186,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -218,18 +213,15 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
     {
-      "Contract": "DAI_token",
+      "Contract": "DAIToken",
       "Action": "Approve",
       "Amount": 100
     }
@@ -244,13 +236,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -275,13 +264,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Success",
   "Events": [
@@ -310,13 +296,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -329,20 +312,17 @@ _\*only when there is the geth error_
 }
 ```
 
-<a id="deposit  "></a>
+<a id="deposit"></a>
 
 ### Deposit
 
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -362,13 +342,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Waiting",
   "Events": [
@@ -392,13 +369,10 @@ _\*only when there is the geth error_
 ```json
 {
   "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "From": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D",
-  "To": "0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F",
   "Nonce": 5,
   "GasPrice": 102000000000,
   "GasLimit": 743061,
   "GasUsed": 615586,
-  "Value": 0,
   "Timestamp": 1596433159,
   "Status": "Success",
   "Events": [
