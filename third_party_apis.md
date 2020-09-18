@@ -1,4 +1,10 @@
-- gas price
+- Gas Price
 EThGasStation
-- fiat exchange rate
+- Fiat Exchange Rate
 CryptoCompare
+- Compound Stats
+ - exchange rate
+ - supply(lend) rate
+- Uniswap Stats
+ - reserve
+ 
