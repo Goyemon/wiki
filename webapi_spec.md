@@ -392,3 +392,4 @@ _\*only when there is the geth error_
   }
 }
 ```
+_*Some information here might be able to get from their API. I will look into it._
