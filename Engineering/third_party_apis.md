@@ -1,10 +1,16 @@
-- Gas Price
-EThGasStation
-- Fiat Exchange Rate
-CryptoCompare
-- Compound Stats
- - exchange rate
- - supply(lend) rate
-- Uniswap Stats
- - reserve
- 
+- EThGasStation
+
+  Gas Price
+
+- CryptoCompare
+
+  Fiat Exchange Rate
+
+- Compound API
+
+  - CDAI exchange rate
+  - DAI supply(lend) rate
+
+- Uniswap API
+  - WETH reserve
+  - DAI reserve
