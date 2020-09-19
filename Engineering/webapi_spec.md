@@ -129,6 +129,8 @@ _\*only when there is the geth error_
 }
 ```
 
+[This](https://etherscan.io/tx/0xb0ff4734ed5065b904464449719761779d0bb8ffe23a414de3e32455d723ad4c) is an example of the ETHTransfer tx in the mainnet.
+
 <a id="DAI_transfer"></a>
 
 ### DAITransfer
@@ -147,6 +149,8 @@ _\*only when there is the geth error_
   "Amount": 100
 }
 ```
+
+[This](https://etherscan.io/tx/0x1386a3c354a078dc7d6e4c2c5261cc1f9401435e6589f85b1812f2fa3be972db) is an example of the DAITransfer tx in the mainnet.
 
 <a id="CDAI_transfer"></a>
 
@@ -167,6 +171,8 @@ _\*only when there is the geth error_
 }
 ```
 
+[This](https://etherscan.io/tx/0x2998bbbd74ce820e0ebb362653170a6ddf93327e0f35cc6e36d81ac913d38c7c) is an example of the CDAITransfer tx in the mainnet.
+
 <a id="PLDAI_transfer"></a>
 
 ### PLDAITransfer
@@ -185,6 +191,8 @@ _\*only when there is the geth error_
   "Amount": 100
 }
 ```
+
+[This](https://etherscan.io/tx/0x2a927f78f85cbdb55e287c314edd6f64ce64a9c2f294342729cdd375160ccac0) is an example of the PLDAITransfer tx in the mainnet.
 
 <a id="compound_DAI"></a>
 
@@ -209,6 +217,8 @@ _\*only when there is the geth error_
 }
 ```
 
+[This](https://etherscan.io/tx/0x7f2e54241687e210ddce9f0a3c997e3bdcb96c670a07563938f560fdb7e4a52b) is an example of the Approve tx in the mainnet.
+
 <a id="deposit"></a>
 
 ### Deposit
@@ -243,6 +253,8 @@ _\*only when there is the geth error_
 }
 ```
 
+[This](https://etherscan.io/tx/0xe262822ffe5cc23adecf32fe2499e8546afb5f82291a7a867ed8646fc3746bea) is an example of the Deposit tx in the mainnet.
+
 <a id="withdraw"></a>
 
 ### Withdraw
@@ -276,6 +288,8 @@ _\*only when there is the geth error_
   "Amount": 132.4
 }
 ```
+
+[This](https://etherscan.io/tx/0xf4fc657497d5ede050562cb030ebfeca701533de8604b150d96cf7b27c394e43) is an example of the Withdraw tx in the mainnet.
 
 <a id="pool_together_v2_weekly_DAI"></a>
 
@@ -300,6 +314,8 @@ _\*only when there is the geth error_
 }
 ```
 
+[This](https://etherscan.io/tx/0x1c66c185e86ec89f9f81005e34def9e4d5a89095182e391b9bd8a39260369a4a) is an example of the Approve tx in the mainnet.
+
 <a id="deposit"></a>
 
 ### Deposit
@@ -319,6 +335,8 @@ _\*only when there is the geth error_
 }
 ```
 
+[This](https://etherscan.io/tx/0xaf33ddf39bb7e870791c8236d8d6e81e18ded0b65729049d911f06381e8833ba) is an example of the Deposit tx in the mainnet.
+
 <a id="withdraw"></a>
 
 ### Withdraw
@@ -337,6 +355,8 @@ _\*only when there is the geth error_
   "Amount": 100
 }
 ```
+
+[This](https://etherscan.io/tx/0xde6ef97b0860899a128c28118148a3481a836c033c1beb5e186526d8c36a722e) is an example of the Withdraw tx in the mainnet.
 
 <a id="uniswap_v2"></a>
 
@@ -363,6 +383,8 @@ _\*only when there is the geth error_
   "BoughtAmount": 100
 }
 ```
+
+[This](https://etherscan.io/tx/0xb3a5c1bb73d52679c7cdeb682e27922fbff2885ead4992cd9d1dfc8636ab9626) is an example of the SwapExactETHForTokens tx in the mainnet.
 
 <a id="ProtocolStats"></a>
 
@@ -392,4 +414,5 @@ _\*only when there is the geth error_
   }
 }
 ```
-_*Some information here might be able to get from their API. I will look into it._
+
+_\*Some information here might be able to get from their API. I will look into it._
