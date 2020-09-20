@@ -9,3 +9,5 @@
 - [Monitoring Contracts](./monitoring_contracts.md)
 
 - [Protocol List](./protocol_list.md)
+
+- [Token List](./token_list.md)
