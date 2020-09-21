@@ -38,12 +38,22 @@
 
 ## Response
 
-_\*only when there is the geth error_
+Success:
 
 ```json
 {
   "Id": "1598836349170",
-  "Type": "TransactionError",
+  "Type": "OutgoingTransaction",
+  "TxHash": "0x6ae48a0be3dbf9a8bab3afa42d28cf6e01437c12918483e5c06e15f5581b6cb6"
+}
+```
+
+Error:
+
+```json
+{
+  "Id": "1598836349170",
+  "Type": "OutgoingTransaction",
   "Error": {
     "Code": -32000,
     "Message": "replacement transaction underpriced"
