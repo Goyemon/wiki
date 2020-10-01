@@ -26,6 +26,20 @@
 
 - Redeem
 
+## PoolTogetherV3WeeklyDAI
+
+[]()
+
+[]()
+
+### Events
+
+- Deposited
+
+- InstantWithdrawal
+
+- Awarded
+
 ## UniswapV2
 
 [0x46C361C9191A2F7cA632e7A0B208702010d4a5Af](https://ropsten.etherscan.io/address/0x46C361C9191A2F7cA632e7A0B208702010d4a5Af)
@@ -65,6 +79,20 @@
 - Mint
 
 - Redeem
+
+## PoolTogetherV3WeeklyDAI
+
+[]()
+
+[]()
+
+### Events
+
+- Deposited
+
+- InstantWithdrawal
+
+- Awarded
 
 ## UniswapV2
 
