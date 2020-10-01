@@ -368,6 +368,128 @@ Error:
 
 [This](https://etherscan.io/tx/0xde6ef97b0860899a128c28118148a3481a836c033c1beb5e186526d8c36a722e) is an example of the Withdraw tx in the mainnet.
 
+## PoolTogetherV3WeeklyDAI
+
+<a id="approve"></a>
+
+### Approve
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "DAITokenContract",
+      "Eevnt": "Approve",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenOut": "DAI",
+      "AmountOut": "100000000000000000000"
+    }
+  ]
+}
+```
+
+<a id="deposit"></a>
+
+### Deposit
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "PoolTogetherV3WeeklyDAI",
+      "Eevnt": "Deposited",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenIn": "PLDAI",
+      "AmountIn": "100000000000000000000",
+      "TokenOut": "DAI",
+      "AmountOut": "100000000000000000000"
+    }
+  ]
+}
+```
+
+<a id="withdraw"></a>
+
+### Withdraw
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "PoolTogetherV3WeeklyDAI",
+      "Eevnt": "InstantWithdrawal",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenIn": "DAI",
+      "AmountIn": "100000000000000000000",
+      "TokenOut": "PLDAI",
+      "AmountOut": "100000000000000000000"
+    }
+  ]
+}
+```
+
+<a id="award"></a>
+
+### Award
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "PoolTogetherV3WeeklyDAI",
+      "Eevnt": "Award",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenIn": "PLDAI",
+      "AmountIn": "900000000000000000000"
+    }
+  ]
+}
+```
+
 <a id="uniswap_v2"></a>
 
 ## UniswapV2
@@ -416,11 +538,11 @@ Error:
   },
   "PoolTogetherV3DAIWeekly": {
     "TotalBalance": "aaa588dc84c87367b6a3",
-    "EstimatedInterestRate": "025a9386c7a226",
+    "EstimatedAwardAmount": "025a9386c7a226",
     "Supply": "57dcccd99fe50bcfbdd0",
     "CurrentDrawId": "24",
-    "LastWinner": "0fda4ac09a12c10fae30e429f4d6b47c9a83c87e",
-    "Winnings": "1add02461d9458875d"
+    "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e",
+    "LastAwardAmount": "100000000000000000000"
   }
 }
 ```
