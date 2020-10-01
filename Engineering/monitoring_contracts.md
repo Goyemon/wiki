@@ -69,6 +69,26 @@
   );
 ```
 
+- AwardedExternalERC20
+
+```solidity
+  event AwardedExternalERC20(
+    address indexed winner,
+    address indexed token,
+    uint256 amount
+  );
+```
+
+- AwardedExternalERC721
+
+```solidity
+  event AwardedExternalERC721(
+    address indexed winner,
+    address indexed token,
+    uint256[] tokenIds
+  );
+```
+
 ## UniswapV2
 
 [0x46C361C9191A2F7cA632e7A0B208702010d4a5Af](https://ropsten.etherscan.io/address/0x46C361C9191A2F7cA632e7A0B208702010d4a5Af)
@@ -149,6 +169,26 @@
     address indexed winner,
     address indexed token,
     uint256 amount
+  );
+```
+
+- AwardedExternalERC20
+
+```solidity
+  event AwardedExternalERC20(
+    address indexed winner,
+    address indexed token,
+    uint256 amount
+  );
+```
+
+- AwardedExternalERC721
+
+```solidity
+  event AwardedExternalERC721(
+    address indexed winner,
+    address indexed token,
+    uint256[] tokenIds
   );
 ```
 
