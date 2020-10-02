@@ -10,3 +10,5 @@
 
   - CDAI exchange rate
   - DAI supply(lend) rate
+  - life time interest earned
+  
