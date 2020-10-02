@@ -576,7 +576,7 @@ Error:
       "Eevnt": "Deposit",
       "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
       "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenIn": "",
+      "TokenIn": "ADAI",
       "AmountIn": "100000000000000000000",
       "TokenOut": "DAI",
       "AmountOut": "100000000000000000000"
@@ -609,7 +609,7 @@ Error:
       "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "TokenIn": "DAI",
       "AmountIn": "100000000000000000000",
-      "TokenOut": "",
+      "TokenOut": "ADAI",
       "AmountOut": "100000000000000000000"
     }
   ]
