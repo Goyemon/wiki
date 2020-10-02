@@ -72,3 +72,5 @@ _TokenSets is the first application built on the Set Protocol_
 ## DeFiZap
 
 ## Totle
+
+## [Yearn Finance](https://yearn.finance/)
