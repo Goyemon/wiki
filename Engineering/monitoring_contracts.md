@@ -101,6 +101,18 @@
 
 - Sync
 
+## Aave
+
+[]()
+
+[]()
+
+### Events
+
+- Deposit
+
+- RedeemUnderlying
+
 # Mainnet
 
 ## DAIToken
@@ -203,3 +215,15 @@
 - Swap
 
 - Sync
+
+## Aave
+
+[]()
+
+[]()
+
+### Events
+
+- Deposit
+
+- RedeemUnderlying
