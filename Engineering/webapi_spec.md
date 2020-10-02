@@ -539,7 +539,6 @@ Error:
   "PoolTogetherV3DAIWeekly": {
     "TotalBalance": "aaa588dc84c87367b6a3",
     "EstimatedAwardAmount": "025a9386c7a226",
-    "Supply": "57dcccd99fe50bcfbdd0",
     "CurrentDrawId": "24",
     "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e",
     "LastAwardAmount": "100000000000000000000"
