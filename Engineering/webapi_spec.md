@@ -525,6 +525,35 @@ Error:
 
 ## Aave
 
+<a id="approve"></a>
+
+### Approve
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "DAITokenContract",
+      "Eevnt": "Approve",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenOut": "DAI",
+      "AmountOut": "100000000000000000000"
+    }
+  ]
+}
+```
+
 <a id="deposit"></a>
 
 ### Deposit
