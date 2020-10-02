@@ -57,6 +57,7 @@ There seems to be no mobile wallet that supports this protocol as of today. Jul 
 
 ## Aave
 
+- Lending
 - Flash loans
 
 ## Opyn
