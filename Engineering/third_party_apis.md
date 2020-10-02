@@ -10,7 +10,3 @@
 
   - CDAI exchange rate
   - DAI supply(lend) rate
-
-- Uniswap API
-  - WETH reserve
-  - DAI reserve
