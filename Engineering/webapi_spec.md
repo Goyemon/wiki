@@ -115,6 +115,9 @@ Error:
   - [Withdraw](#withdraw)
 - [UniswapV2](#uniswap_v2)
   - [SwapExactETHForTokens](#swap_exact_ETH_for_tokens)
+- [Aave](#aave)
+  - [Deposit](#deposit)
+  - [Withdraw](#withdraw)
 
 <a id="transfer"></a>
 
@@ -517,6 +520,72 @@ Error:
 ```
 
 [This](https://etherscan.io/tx/0xb3a5c1bb73d52679c7cdeb682e27922fbff2885ead4992cd9d1dfc8636ab9626) is an example of the SwapExactETHForTokens tx in the mainnet.
+
+<a id="aave"></a>
+
+## Aave
+
+<a id="deposit"></a>
+
+### Deposit
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "Aave",
+      "Eevnt": "Deposit",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenIn": "",
+      "AmountIn": "100000000000000000000",
+      "TokenOut": "DAI",
+      "AmountOut": "100000000000000000000"
+    }
+  ]
+}
+```
+
+<a id="withdraw"></a>
+
+### Withdraw
+
+```json
+{
+  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
+  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "Nonce": 860,
+  "GasPrice": 79000000000,
+  "GasLimit": 404679,
+  "GasUsed": 137662,
+  "Amount": "",
+  "Time": 1601510881,
+  "Events": [
+    {
+      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "ContractName": "PoolTogetherV3WeeklyDAI",
+      "Eevnt": "RedeemUnderlying",
+      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "TokenIn": "DAI",
+      "AmountIn": "100000000000000000000",
+      "TokenOut": "",
+      "AmountOut": "100000000000000000000"
+    }
+  ]
+}
+```
 
 <a id="ProtocolStats"></a>
 
