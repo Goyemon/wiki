@@ -29,6 +29,7 @@ Synthetic asset issuance platform.
 
 ## Uniswap
 
+- Provide liquidity
 - Swapping
 - Flash swaps
 
