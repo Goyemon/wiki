@@ -635,11 +635,11 @@ Error:
     "YearlyInterestRate": "6138060200665175331936000"
   },
   "PoolTogetherV3DAIWeekly": {
-    "TotalBalance": "aaa588dc84c87367b6a3",
-    "EstimatedAwardAmount": "025a9386c7a226",
-    "CurrentDrawId": "24",
-    "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e",
-    "LastAwardAmount": "100000000000000000000"
+    "TotalBalance": "aaa588dc84c87367b6a3", // we can get this with the _tokenTotalSupply?
+    "EstimatedAwardAmount": "025a9386c7a226", // we can get this with the awardBalance function?
+    "CurrentDrawId": "24", // they don't have a unique id for each round, but we can use the starting time. 
+    "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e", // can take this from Awarded event but what if a user doesn't win? we don't index it. 
+    "LastAwardAmount": "100000000000000000000", // can take this from Awarded event but what if a user doesn't win? we don't index it. 
     // I might want to add some other key-value to calculate the exit fee
   }
 }
