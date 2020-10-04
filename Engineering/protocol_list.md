@@ -5,7 +5,9 @@
 
 # Protocols and their features
 
-## [MakerDAO](https://makerdao.com/)
+## Stablecoins
+
+- ### [MakerDAO](https://makerdao.com/)
 
 Dai stablecoin system.
 
@@ -14,65 +16,81 @@ Dai stablecoin system.
 - DSR
   Earn interest by locking Dai.
 
-## [Synthetix](https://www.synthetix.io/)
+### Lien
+
+## Synthetic Assets
+
+### [Synthetix](https://www.synthetix.io/)
 
 Synthetic asset issuance platform.
 
 - Staking
 - Trading
 
-## Compound
+## Lending
+
+### Compound
 
 - Lending
 - Borrowing
 - COMP governance token
 
-## Uniswap
+### Aave
+
+- Lending
+- Flash loans
+
+## Prize-linked Savings
+
+### PoolTogether
+
+## Exchanges
+
+### Uniswap
 
 - Provide liquidity
 - Swapping
 - Flash swaps
 
-## [dYdX](https://dydx.exchange/)
+### DDEX
 
-Margin trading system.
+### Oasis Save
 
-## [Fulcrum](https://fulcrum.trade/)
+### Totle
 
-## Nuo
-
-## bZx
-
-## DDEX
-
-## Oasis Save
-
-## [Curve](https://www.curve.fi/)
+### [Curve](https://www.curve.fi/)
 
 Curve lends assets on Compound when they aren’t being traded and gives that interest to liquidity providers.
 There seems to be no mobile wallet that supports this protocol as of today. Jul 1, 2020.
 
-## [Balancer](https://balancer.finance/)
+## Margin Trading
 
-## PoolTogether
+### [dYdX](https://dydx.exchange/)
 
-## Aave
+Margin trading system.
 
-- Lending
-- Flash loans
+## Options
 
-## Opyn
+### Opyn
 
 Insurance for your DeFi deposits.
 
-## [Set Protocol](https://www.tokensets.com/)
+## Portfolio Management
+
+### [Set Protocol](https://www.tokensets.com/)
 
 _TokenSets is the first application built on the Set Protocol_
 
-## Lien
+## Others
 
-## [Zapper](https://zapper.fi/)
+### [Fulcrum](https://fulcrum.trade/)
 
-## Totle
+### Nuo
 
-## [Yearn Finance](https://yearn.finance/)
+### bZx
+
+### [Balancer](https://balancer.finance/)
+
+### [Zapper](https://zapper.fi/)
+
+### [Yearn Finance](https://yearn.finance/)
