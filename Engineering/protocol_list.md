@@ -81,6 +81,8 @@ Insurance for your DeFi deposits.
 
 _TokenSets is the first application built on the Set Protocol_
 
+### [Yearn Finance](https://yearn.finance/)
+
 ## Others
 
 ### [Fulcrum](https://fulcrum.trade/)
@@ -93,6 +95,6 @@ _TokenSets is the first application built on the Set Protocol_
 
 ### [Zapper](https://zapper.fi/)
 
-### [Yearn Finance](https://yearn.finance/)
+### [Yam Finance](https://yam.finance/)
 
 ### Ampleforth
