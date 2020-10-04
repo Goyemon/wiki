@@ -94,3 +94,5 @@ _TokenSets is the first application built on the Set Protocol_
 ### [Zapper](https://zapper.fi/)
 
 ### [Yearn Finance](https://yearn.finance/)
+
+### Ampleforth
