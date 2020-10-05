@@ -11,3 +11,5 @@
 - [Protocol List](./protocol_list.md)
 
 - [Token List](./token_list.md)
+
+- [Contracts Spec](./contract_spec.md)
