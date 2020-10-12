@@ -1,6 +1,6 @@
 # How We Get Things Done
 
-- We ship something every week to keep the momentum.
+- We ship something every two weeks to keep the momentum.
 - No tasks longer than one week – worst case, two weeks. If you just joined, get something done.
 - One person per task. Get help from others, but you and you alone are accountable.
 - You pick what to work on for our next weekly goal.
