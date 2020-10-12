@@ -1,4 +1,4 @@
-- EThGasStation
+- [EThGasStation](https://www.ethgasstation.info/)
 
   Gas Price
 
@@ -6,7 +6,7 @@
 
   Fiat Exchange Rate
 
-- Compound API
+- [Compound API](https://compound.finance/docs/api)
 
   - CDAI exchange rate
   - DAI supply(lend) rate
