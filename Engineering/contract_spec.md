@@ -13,3 +13,12 @@
   - unlock the wallet
 
 - Meta Transactions Contract
+
+- Atomic Transactions
+
+  - approve + another method
+  e.g. deposit, depositPool, mint.
+
+  - exchange + transfer
+  e.g. ETH to CDAI and then transfer CDAI
+  
