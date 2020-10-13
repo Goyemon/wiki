@@ -26,6 +26,18 @@
 
 - Redeem
 
+## PoolTogetherV2WeeklyDAI
+
+[0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F](https://ropsten.etherscan.io/address/0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F)
+
+[]()
+
+### Events
+
+- Mint
+
+- Redeem
+
 ## PoolTogetherV3WeeklyDAI
 
 []()
@@ -136,6 +148,18 @@
 ### Events
 
 - Transfer
+
+- Mint
+
+- Redeem
+
+## PoolTogetherV2WeeklyDAI
+
+[0x29fe7D60DdF151E5b52e5FAB4f1325da6b2bD958](https://etherscan.io/address/0x29fe7D60DdF151E5b52e5FAB4f1325da6b2bD958)
+
+[]()
+
+### Events
 
 - Mint
 
