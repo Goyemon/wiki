@@ -296,15 +296,26 @@ null
 
 ```json
 {
-  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "nonce": 5,
-  "gas_price": 102000000000,
-  "gas_limit": 743061,
-  "gas_used": 615586,
-  "time": 1596433159,
-  "Contract": "DAIToken",
-  "Action": "Approve",
-  "Amount": 100
+  "hash": "0x6b511183563ae3c75293600014dec3d5a9c37da4f06327633ecfe3f83f96c68d",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "nonce": 831,
+  "gas_price": 115000000000,
+  "gas_limit": 727455,
+  "gas_used": 115792,
+  "amount": "0",
+  "time": 1600235936,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "DAI_TOKEN",
+      "event_name": "Approve",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_out": "DAI",
+      "amount_out": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -436,15 +447,26 @@ null
 
 ```json
 {
-  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "nonce": 5,
-  "gas_price": 102000000000,
-  "gas_limit": 743061,
-  "gas_used": 615586,
-  "time": 1596433159,
-  "Contract": "PoolTogetherV2WeeklyDAI",
-  "Action": "Approve",
-  "Amount": 100
+  "hash": "0x6b511183563ae3c75293600014dec3d5a9c37da4f06327633ecfe3f83f96c68d",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "nonce": 831,
+  "gas_price": 115000000000,
+  "gas_limit": 727455,
+  "gas_used": 115792,
+  "amount": "0",
+  "time": 1600235936,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "DAI_TOKEN",
+      "event_name": "Approve",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_out": "DAI",
+      "amount_out": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -456,12 +478,15 @@ null
 
 ```json
 {
-  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "nonce": 5,
-  "gas_price": 102000000000,
-  "gas_limit": 743061,
-  "gas_used": 615586,
-  "time": 1596433159,
+  "hash": "0x6b511183563ae3c75293600014dec3d5a9c37da4f06327633ecfe3f83f96c68d",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "nonce": 831,
+  "gas_price": 115000000000,
+  "gas_limit": 727455,
+  "gas_used": 115792,
+  "amount": "0",
+  "time": 1600235936,
   "Contract": "PoolTogetherV2WeeklyDAI",
   "Action": "Deposit",
   "Amount": 100
@@ -476,12 +501,15 @@ null
 
 ```json
 {
-  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "nonce": 5,
-  "gas_price": 102000000000,
-  "gas_limit": 743061,
-  "gas_used": 615586,
-  "time": 1596433159,
+  "hash": "0x6b511183563ae3c75293600014dec3d5a9c37da4f06327633ecfe3f83f96c68d",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "nonce": 831,
+  "gas_price": 115000000000,
+  "gas_limit": 727455,
+  "gas_used": 115792,
+  "amount": "0",
+  "time": 1600235936,
   "Contract": "PoolTogetherV2WeeklyDAI",
   "Action": "Withdraw",
   "Amount": 100
@@ -509,13 +537,13 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "DAITokenContract",
-      "Eevnt": "Approve",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenOut": "DAI",
-      "AmountOut": "100000000000000000000"
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "DAI_TOKEN",
+      "event_name": "Approve",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_out": "DAI",
+      "amount_out": "10000000000000000000"
     }
   ]
 }
@@ -670,13 +698,13 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "DAITokenContract",
-      "Eevnt": "Approve",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenOut": "DAI",
-      "AmountOut": "100000000000000000000"
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "DAI_TOKEN",
+      "event_name": "Approve",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_out": "DAI",
+      "amount_out": "10000000000000000000"
     }
   ]
 }
@@ -747,7 +775,7 @@ null
 ```
 
 [This](https://etherscan.io/tx/) is an example of the Withdraw tx in the mainnet.
-*will add the link later
+\*will add the link later
 
 <a id="ProtocolStats"></a>
 
