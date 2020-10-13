@@ -1,10 +1,11 @@
 # type
 
 1. [AddressRegistration](#AddressRegistration)
-2. [OutgoingTransaction](#OutgoingTransaction)
-3. [Balance](#Balance)
-4. [TransactionHistory](#TransactionHistory)
-5. [ProtocolStats](#ProtocolStats)
+2. [Login](#Login)
+3. [OutgoingTransaction](#OutgoingTransaction)
+4. [Balance](#Balance)
+5. [TransactionHistory](#TransactionHistory)
+6. [ProtocolStats](#ProtocolStats)
 
 <a id="AddressRegistration"></a>
 
@@ -14,25 +15,79 @@
 
 ```json
 {
-  "Id": "1898272544408",
-  "Type": "AddressRegistration",
-  "DeviceId": "4598272544408",
-  "Timestamp": 1595433159,
-  "Address": "0x1A8026341cB5Ae8B210dD7373cbeD9B12D0F078D"
-};
+  "android_device_id": "android_device_id",
+  "ios_device_id": "ios_device_id",
+  "email": "stereophonics0215@gmail.com",
+  "address": "0xCa7A91F3989c8E8CAd46E57ED3eDb3633eD2c31f",
+  "network": "ropsten"
+}
 ```
 
-<a id="OutgoingTransaction"></a>
+## Response
 
-# 2. OutgoingTransaction
+Success:
+
+```json
+{
+  "id": "921f5c77-0cfb-11eb-a7dc-0242ac120003",
+  "created_at": "2020-10-13T02:26:59.281871Z",
+  "updated_at": "2020-10-13T02:26:59.281871Z",
+  "android_device_id": "android_device_id",
+  "ios_device_id": "ios_device_id",
+  "email": "stereophonics0215@gmail.com",
+  "roles": ["user"],
+  "addresses": [
+    {
+      "address": "0x0B85edBd6ccA6Fc9689B6a5CF8a668856E77d753",
+      "created_at": "2020-10-13T02:26:59.281871Z",
+      "updated_at": "2020-10-13T02:26:59.281871Z",
+      "network": "ropsten"
+    }
+  ]
+}
+```
+
+Error:
+
+```json
+{
+  "status": "Unprocessable Entity",
+  "code": "invalid_request",
+  "errors": "address already registered"
+}
+```
+
+<a id="Login"></a>
+
+# 2. Login
 
 ## POST method
 
 ```json
 {
-  "Type": "OutgoingTransaction",
-  "SignedTx": "0xf8890485147d35700083062cc7945d3a536e4d6dbd6114cc1ead35777bab948e364380a4a0712d6800000000000000000000000000000000000000000000002bdd586116b52b000026a01c125c2cb31d38ae8300d3d3434c7a2ef842a172fa6b3cce0e4f2b9e20dfa261a00e9dc555d73d9c308891806cfa428e4694a7a3fa138845284437275dc94ad53c",
-  "Nonce": "4"
+  "address": "0xCa7A91F3989c8E8CAd46E57ED3eDb3633eD2c31f",
+  "signature": "test"
+}
+```
+
+## Response
+
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiZWEyOWU4MmItMDgzYi0xMWViLWE3ZGMtMDI0MmFjMTIwMDAzIiwicm9sZXMiOlsidXNlciJdLCJleHAiOjE2MDI1NjMzNjQsImlhdCI6MTYwMjU1NjE2NH0.4bUUwvr5x0G-ngdTyZN640MbzjCw_BUJdwSwHb4NtfE",
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiZWEyOWU4MmItMDgzYi0xMWViLWE3ZGMtMDI0MmFjMTIwMDAzIiwidG9rZW4iOiIwN2EzZGE3Zi1kY2YyLTQ5OTItODQ3ZS01N2QxOGVhZTIwZDQiLCJleHAiOjE2MDI1NjMzNjQsImlhdCI6MTYwMjU1NjE2NH0.5AqG4uod0XxQDM4Cz9SHoRDj1W-DYzeacUm5LoZx0Og"
+}
+```
+
+<a id="OutgoingTransaction"></a>
+
+# 3. OutgoingTransaction
+
+## POST method
+
+```json
+{
+  "signed_tx": "0xf88b820357851faa3b500083062cc7942b536482a01e620ee111747f8334b395a42a555e80a4a0712d680000000000000000000000000000000000000000000000000de0b6b3a764000029a054661f207be006dea2efb08af66c760ad74bef83ea6d8c93646e96d3c60b09d1a07611a982ab0337491d6dcb5bf22602d7da3fd37652a19cec08e0b463343c1b99"
 }
 ```
 
@@ -52,50 +107,45 @@ Error:
 
 ```json
 {
-  "Id": "1598836349170",
-  "Type": "OutgoingTransaction",
-  "Error": {
-    "Code": -32000,
-    "Message": "replacement transaction underpriced"
-  },
-  "Nonce": "5"
+  "status": "Unprocessable Entity",
+  "code": "invalid_request",
+  "errors": "nonce too low"
 }
 ```
 
 <a id="Balance"></a>
 
-# 3. Balance
+# 4. Balance
 
 ## GET method
 
 ```json
 {
-  "Id": "1498272544408",
-  "Type": "Balance",
-  "ETH": "fdca34836f1000",
-  "DAI": "40b81b3435761c7b83",
-  "CDAI": "3e84d010243",
-  "PLDAI": "0"
+  "address": "0xCa7A91F3989c8E8CAd46E57ED3eDb3633eD2c31f",
+  "network": "ropsten",
+  "balance": {
+    "CDAI": "0",
+    "DAI": "0",
+    "WEI": "0",
+    "PLDAI": "o"
+  }
 }
 ```
 
 <a id="TransactionHistory"></a>
 
-# 4. TransactionHistory
+# 5. TransactionHistory
 
 ## GET method
 
+## Response
+
 ```json
-{
-  "Id": "4598272544408",
-  "Type": "TransactionHistory",
-  "Txes": [{}, {}, {}],
-  "Contracts": [
-    // a list of contracts an address is associated with
-    "7a250d5630b4cf539739df2c5dacb4c659f2488d",
-    "5d3a536e4d6dbd6114cc1ead35777bab948e3643"
-  ]
-}
+[{}, {}, {}]
+```
+
+```json
+null
 ```
 
 ## Transaction Type
@@ -129,16 +179,15 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
-  "Contract": "ETH",
-  "Action": "Send",
-  "Amount": 100
+  "hash": "0x982fba2b0e7559b9db7730d8869c102498d6a9c9d586e12edae9b7f7d98a69cd",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 818,
+  "gas_price": 143000000000,
+  "gas_limit": 688658,
+  "gas_used": 28853,
+  "amount": "10000000000000000",
+  "time": 1600225514
 }
 ```
 
@@ -150,16 +199,26 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
-  "Contract": "DAIToken",
-  "Action": "Send",
-  "Amount": 100
+  "hash": "0x5051f271809f99f0993479b7c8d6109b34cec965bd1693a83228491fb063f002",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+  "nonce": 826,
+  "gas_price": 91000000000,
+  "gas_limit": 67009,
+  "gas_used": 51830,
+  "amount": "0",
+  "time": 1600232154,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "DAI_TOKEN",
+      "event_name": "Transfer",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_in": "DAI",
+      "amount_in": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -171,16 +230,26 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
-  "Contract": "CDAIToken",
-  "Action": "Receive",
-  "Amount": 100
+  "hash": "0x5051f271809f99f0993479b7c8d6109b34cec965bd1693a83228491fb063f002",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+  "nonce": 826,
+  "gas_price": 91000000000,
+  "gas_limit": 67009,
+  "gas_used": 51830,
+  "amount": "0",
+  "time": 1600232154,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "CDAI_TOKEN",
+      "event_name": "Transfer",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_in": "CDAI",
+      "amount_in": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -192,16 +261,26 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
-  "Contract": "PLDAIToken",
-  "Action": "Send",
-  "Amount": 100
+  "hash": "0x5051f271809f99f0993479b7c8d6109b34cec965bd1693a83228491fb063f002",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+  "nonce": 826,
+  "gas_price": 91000000000,
+  "gas_limit": 67009,
+  "gas_used": 51830,
+  "amount": "0",
+  "time": 1600232154,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "PLDAI_TOKEN",
+      "event_name": "Transfer",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_in": "PLDAI",
+      "amount_in": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -217,13 +296,12 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
+  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+  "nonce": 5,
+  "gas_price": 102000000000,
+  "gas_limit": 743061,
+  "gas_used": 615586,
+  "time": 1596433159,
   "Contract": "DAIToken",
   "Action": "Approve",
   "Amount": 100
@@ -238,31 +316,53 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
-  "Contract": "CompoundDAI",
-  "Action": "Deposit",
-  "Amount": 100
+  "hash": "0x97ba24901265144f7759b4c8242c90630a3c2b557e250483e668e3eef7799e23",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "nonce": 829,
+  "gas_price": 103000000000,
+  "gas_limit": 404679,
+  "gas_used": 137650,
+  "amount": "0",
+  "time": 1600234813,
+  "events": [
+    {
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "CDAI",
+      "event_name": "Mint",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "token_in": "DAI",
+      "amount_in": "10000000000000000000",
+      "token_out": "CDAI",
+      "amount_out": "31793626728"
+    }
+  ]
 }
 ```
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
-  "Contract": "COMPToken",
-  "Action": "Receive",
-  "Amount": 132.4
+  "hash": "0x5051f271809f99f0993479b7c8d6109b34cec965bd1693a83228491fb063f002",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+  "nonce": 826,
+  "gas_price": 91000000000,
+  "gas_limit": 67009,
+  "gas_used": 51830,
+  "amount": "0",
+  "time": 1600232154,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "COMP_TOKEN",
+      "event_name": "Transfer",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_in": "COMP",
+      "amount_in": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -274,31 +374,53 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Success",
-  "Contract": "CompoundDAI",
-  "Action": "Withdraw",
-  "Amount": 100
+  "hash": "0x6b511183563ae3c75293600014dec3d5a9c37da4f06327633ecfe3f83f96c68d",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+  "nonce": 831,
+  "gas_price": 115000000000,
+  "gas_limit": 727455,
+  "gas_used": 115792,
+  "amount": "0",
+  "time": 1600235936,
+  "events": [
+    {
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "CDAI",
+      "event_name": "Redeem",
+      "from": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "to": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "token_in": "CDAI",
+      "amount_in": "31793626341",
+      "token_out": "DAI",
+      "amount_out": "10000000000000000000"
+    }
+  ]
 }
 ```
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Success",
-  "Contract": "COMPToken",
-  "Action": "Receive",
-  "Amount": 132.4
+  "hash": "0x5051f271809f99f0993479b7c8d6109b34cec965bd1693a83228491fb063f002",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+  "nonce": 826,
+  "gas_price": 91000000000,
+  "gas_limit": 67009,
+  "gas_used": 51830,
+  "amount": "0",
+  "time": 1600232154,
+  "events": [
+    {
+      "contract_address": "0xB5E5D0F8C0cbA267CD3D7035d6AdC8eBA7Df7Cdd",
+      "contract_name": "COMP_TOKEN",
+      "event_name": "Transfer",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x0C2cfA3C9d3f8248453b0B9D9c8C016F76F5DF5b",
+      "token_in": "COMP",
+      "amount_in": "10000000000000000000"
+    }
+  ]
 }
 ```
 
@@ -314,13 +436,12 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
+  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+  "nonce": 5,
+  "gas_price": 102000000000,
+  "gas_limit": 743061,
+  "gas_used": 615586,
+  "time": 1596433159,
   "Contract": "PoolTogetherV2WeeklyDAI",
   "Action": "Approve",
   "Amount": 100
@@ -335,13 +456,12 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
+  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+  "nonce": 5,
+  "gas_price": 102000000000,
+  "gas_limit": 743061,
+  "gas_used": 615586,
+  "time": 1596433159,
   "Contract": "PoolTogetherV2WeeklyDAI",
   "Action": "Deposit",
   "Amount": 100
@@ -356,13 +476,12 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Waiting",
+  "hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
+  "nonce": 5,
+  "gas_price": 102000000000,
+  "gas_limit": 743061,
+  "gas_used": 615586,
+  "time": 1596433159,
   "Contract": "PoolTogetherV2WeeklyDAI",
   "Action": "Withdraw",
   "Amount": 100
@@ -379,16 +498,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "DAITokenContract",
@@ -408,16 +527,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "PoolTogetherV3WeeklyDAI",
@@ -439,16 +558,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "PoolTogetherV3WeeklyDAI",
@@ -470,16 +589,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "PoolTogetherV3WeeklyDAI",
@@ -503,19 +622,28 @@ Error:
 
 ```json
 {
-  "Hash": "0x9443d4fed1a3cd67985129d9bfb88af2b8d8b31e708947d0e844b705dcf52e5b",
-  "Nonce": 5,
-  "GasPrice": 102000000000,
-  "GasLimit": 743061,
-  "GasUsed": 615586,
-  "Timestamp": 1596433159,
-  "Status": "Success",
-  "Contract": "UniswapV2",
-  "Action": "Swap",
-  "TokenSold": "ETH",
-  "SoldAmount": 0.2,
-  "TokenBought": "DAI",
-  "BoughtAmount": 100
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
+    {
+      "contract_address": "0x46C361C9191A2F7cA632e7A0B208702010d4a5Af",
+      "contract_name": "UNISWAPV2WETHDAI",
+      "event_name": "Swap",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+      "token_in": "WETH",
+      "amount_in": "1000000000000000",
+      "token_out": "DAI",
+      "amount_out": "80183074530213584"
+    }
+  ]
 }
 ```
 
@@ -531,16 +659,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "DAITokenContract",
@@ -560,16 +688,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "Aave",
@@ -591,16 +719,16 @@ Error:
 
 ```json
 {
-  "Hash": "0x896046b79ddd418d996854a46da6e380e2925af1323d40a11bf60cee8a842eaa",
-  "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-  "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-  "Nonce": 860,
-  "GasPrice": 79000000000,
-  "GasLimit": 404679,
-  "GasUsed": 137662,
-  "Amount": "",
-  "Time": 1601510881,
-  "Events": [
+  "hash": "0x28868ce95132ba55d6abc398a1a42ae5b55cbfc7391ca4fb0d4af2124ffd6cff",
+  "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+  "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+  "nonce": 828,
+  "gas_price": 91000000000,
+  "gas_limit": 688658,
+  "gas_used": 109963,
+  "amount": "1000000000000000",
+  "time": 1600234042,
+  "events": [
     {
       "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
       "ContractName": "PoolTogetherV3WeeklyDAI",
@@ -618,28 +746,29 @@ Error:
 
 <a id="ProtocolStats"></a>
 
-# 5. ProtocolStats
+# 6. ProtocolStats
 
 ## GET method
 
 ```json
 {
-  "Id": "1598272353408",
-  "UniswapV2WETHxDAIReserve": {
-    "WETHReserve": "23182c3558c93465acc77e",
-    "DAIReserve": "15551a05a83ee707125b"
+  "uniswap_v2_reserve": {
+    "WETH_reserve": "1620681133713400414",
+    "DAI_reserve": "131785857651475972534"
   },
-  "CompoundDAILending": {
-    "LifetimeEarned": "343691257544659324952969355138285373",
-    "CurrentExchangeRate": "206114493664759872537853664",
-    "YearlyInterestRate": "6138060200665175331936000"
+  "PoolTogetherV2DAIWeekly": {
+    "TotalBalance": "aaa588dc84c87367b6a3",
+    "EstimatedAwardAmount": "025a9386c7a226",
+    "CurrentDrawId": "24",
+    "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e",
+    "LastAwardAmount": "100000000000000000000"
   },
   "PoolTogetherV3DAIWeekly": {
     "TotalBalance": "aaa588dc84c87367b6a3", // we can get this with the _tokenTotalSupply?
     "EstimatedAwardAmount": "025a9386c7a226", // we can get this with the awardBalance function?
-    "CurrentDrawId": "24", // they don't have a unique id for each round, but we can use the starting time. 
-    "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e", // can take this from Awarded event but what if a user doesn't win? we don't index it. 
-    "LastAwardAmount": "100000000000000000000", // can take this from Awarded event but what if a user doesn't win? we don't index it. 
+    "CurrentDrawId": "24", // they don't have a unique id for each round, but we can use the starting time.
+    "LastWinner": "0x0fda4ac09a12c10fae30e429f4d6b47c9a83c87e", // can take this from Awarded event but what if a user doesn't win? we don't index it.
+    "LastAwardAmount": "100000000000000000000" // can take this from Awarded event but what if a user doesn't win? we don't index it.
     // I might want to add some other key-value to calculate the exit fee
   }
 }
