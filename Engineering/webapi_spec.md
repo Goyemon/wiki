@@ -566,15 +566,15 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "PoolTogetherV3WeeklyDAI",
-      "Eevnt": "Deposited",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenIn": "PLDAI",
-      "AmountIn": "100000000000000000000",
-      "TokenOut": "DAI",
-      "AmountOut": "100000000000000000000"
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "PoolTogetherV3WeeklyDAI",
+      "event_name": "Deposited",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "token_in": "PLDAI",
+      "amount_in": "100000000000000000000",
+      "token_out": "DAI",
+      "amount_out": "100000000000000000000"
     }
   ]
 }
@@ -597,15 +597,15 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "PoolTogetherV3WeeklyDAI",
-      "Eevnt": "InstantWithdrawal",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenIn": "DAI",
-      "AmountIn": "100000000000000000000",
-      "TokenOut": "PLDAI",
-      "AmountOut": "100000000000000000000"
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "PoolTogetherV3WeeklyDAI",
+      "event_name": "InstantWithdrawal",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "token_in": "DAI",
+      "amount_in": "100000000000000000000",
+      "token_out": "PLDAI",
+      "amount_out": "100000000000000000000"
     }
   ]
 }
@@ -628,13 +628,13 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "PoolTogetherV3WeeklyDAI",
-      "Eevnt": "Award",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenIn": "PLDAI",
-      "AmountIn": "900000000000000000000"
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "PoolTogetherV3WeeklyDAI",
+      "event_name": "Award",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "token_in": "PLDAI",
+      "amount_in": "900000000000000000000"
     }
   ]
 }
@@ -727,15 +727,15 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "Aave",
-      "Eevnt": "Deposit",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenIn": "ADAI",
-      "AmountIn": "100000000000000000000",
-      "TokenOut": "DAI",
-      "AmountOut": "100000000000000000000"
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "Aave",
+      "event_name": "Deposit",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "token_in": "ADAI",
+      "amount_in": "100000000000000000000",
+      "token_out": "DAI",
+      "amount_out": "100000000000000000000"
     }
   ]
 }
@@ -760,15 +760,15 @@ null
   "time": 1600234042,
   "events": [
     {
-      "ContractAddress": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "ContractName": "PoolTogetherV3WeeklyDAI",
-      "Eevnt": "RedeemUnderlying",
-      "From": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
-      "To": "0x2B536482a01E620eE111747F8334B395a42A555E",
-      "TokenIn": "DAI",
-      "AmountIn": "100000000000000000000",
-      "TokenOut": "ADAI",
-      "AmountOut": "100000000000000000000"
+      "contract_address": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "contract_name": "PoolTogetherV3WeeklyDAI",
+      "event_name": "RedeemUnderlying",
+      "from": "0xa7D41F49dAdCA972958487391d4461a5d0E1c3e9",
+      "to": "0x2B536482a01E620eE111747F8334B395a42A555E",
+      "token_in": "DAI",
+      "amount_in": "100000000000000000000",
+      "token_out": "ADAI",
+      "amount_out": "100000000000000000000"
     }
   ]
 }
