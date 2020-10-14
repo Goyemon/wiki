@@ -16,7 +16,7 @@
 
 [0x2b536482a01e620ee111747f8334b395a42a555e](https://ropsten.etherscan.io/address/0x2b536482a01e620ee111747f8334b395a42a555e)
 
-[ABI](./ABI_ropsten_CDAI.json)
+[ABI](./ABIs/ABI_ropsten_CDAI.json)
 
 ### Events
 
@@ -30,7 +30,7 @@
 
 [0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F](https://ropsten.etherscan.io/address/0xCfCe97c17886600841fbd8f26Fd8Fa1eDFfe8E6F)
 
-[]()
+[ABI](./ABIs/ABI_mainnet_PoolTogetherV2WeeklyDAI.json)
 
 ### Events
 
@@ -105,7 +105,7 @@
 
 [0x46C361C9191A2F7cA632e7A0B208702010d4a5Af](https://ropsten.etherscan.io/address/0x46C361C9191A2F7cA632e7A0B208702010d4a5Af)
 
-[ABI](./ABI_ropsten_uniswapv2.json)
+[ABI](./ABIs/ABI_ropsten_uniswapv2.json)
 
 ### Events
 
@@ -131,7 +131,7 @@
 
 [0x6b175474e89094c44da98b954eedeac495271d0f](https://etherscan.io/address/0x6b175474e89094c44da98b954eedeac495271d0f)
 
-[ABI](./ABI_mainnet_DAIToken.json)
+[ABI](./ABIs/ABI_mainnet_DAIToken.json)
 
 ### Events
 
@@ -143,7 +143,7 @@
 
 [0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643](https://etherscan.io/address/0x5d3a536e4d6dbd6114cc1ead35777bab948e3643)
 
-[ABI](./ABI_mainnet_CDAI.json)
+[ABI](./ABIs/ABI_mainnet_CDAI.json)
 
 ### Events
 
@@ -232,7 +232,7 @@
 
 [0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11](https://etherscan.io/address/0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11)
 
-[ABI](./ABI_mainnet_uniswapv2.json)
+[ABI](./ABIs/ABI_mainnet_uniswapv2.json)
 
 ### Events
 
