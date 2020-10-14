@@ -1,6 +1,6 @@
-- [Wallet Release Process](./wallet-release-process.md)
+- [Wallet Release Process](./wallet_release_process.md)
 
-- [Wallet Test List](./wallet-test-list.md)
+- [Wallet Test List](./wallet_test_list.md)
 
 - [Web API Spec](./webapi_spec.md)
 
