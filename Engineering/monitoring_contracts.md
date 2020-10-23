@@ -40,9 +40,9 @@
 
 ## PoolTogetherV3WeeklyDAI
 
-[]()
+[0x7e72cfd7F2a0dB4Aa4B1A5b3FaBadc98d45bbeD7](https://ropsten.etherscan.io/address/0x7e72cfd7F2a0dB4Aa4B1A5b3FaBadc98d45bbeD7)
 
-[]()
+[ABI](https://github.com/pooltogether/documentation/blob/6a9717d5430d16c22c404a59789ea9a8bac46d73/.gitbook/assets/prizepool.json)
 
 ### Events
 
@@ -167,9 +167,9 @@
 
 ## PoolTogetherV3WeeklyDAI
 
-[]()
+[0xEBfb47A7ad0FD6e57323C8A42B2E5A6a4F68fc1a](https://etherscan.io/address/0xEBfb47A7ad0FD6e57323C8A42B2E5A6a4F68fc1a)
 
-[]()
+[ABI](https://github.com/pooltogether/documentation/blob/6a9717d5430d16c22c404a59789ea9a8bac46d73/.gitbook/assets/prizepool.json)
 
 ### Events
 
