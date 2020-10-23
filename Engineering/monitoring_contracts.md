@@ -106,58 +106,13 @@ Mainnet:
 
 - Deposited
 
-```solidity
-  event Deposited(
-    address indexed operator,
-    address indexed to,
-    address indexed token,
-    uint256 amount,
-    address referrer
-  );
-```
-
 - InstantWithdrawal
-
-```solidity
-  event InstantWithdrawal(
-    address indexed operator,
-    address indexed from,
-    address indexed token,
-    uint256 amount,
-    uint256 redeemed,
-    uint256 exitFee
-  );
-```
 
 - Awarded
 
-```solidity
-  event Awarded(
-    address indexed winner,
-    address indexed token,
-    uint256 amount
-  );
-```
-
 - AwardedExternalERC20
 
-```solidity
-  event AwardedExternalERC20(
-    address indexed winner,
-    address indexed token,
-    uint256 amount
-  );
-```
-
 - AwardedExternalERC721
-
-```solidity
-  event AwardedExternalERC721(
-    address indexed winner,
-    address indexed token,
-    uint256[] tokenIds
-  );
-```
 
 # UniswapV2
 
