@@ -54,6 +54,32 @@ Mainnet:
 
 - Redeem
 
+# V2WeeklyPLDAIToken
+
+## Address
+
+Ropsten:
+
+[0x37ee25F2Ec7b113Ae5A6e4EB68388596BF162dBE](https://ropsten.etherscan.io/address/0x37ee25F2Ec7b113Ae5A6e4EB68388596BF162dBE)
+
+Mainnet:
+
+[0x49d716DFe60b37379010A75329ae09428f17118d](https://etherscan.io/address/0x49d716DFe60b37379010A75329ae09428f17118d)
+
+## ABI
+
+Ropsten:
+
+Mainnet:
+
+[ABI](./ABIs/ABI_mainnet_v2_weekly_PLDAIToken.json)
+
+## Events
+
+- Approve
+
+- Transfer
+
 # PoolTogetherV2WeeklyDAI
 
 ## Address
