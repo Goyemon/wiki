@@ -102,9 +102,9 @@ Mainnet:
 
 ## Events
 
-- Mint
+- Deposited
 
-- Redeem
+- Withdrawn
 
 # PoolTogetherV3WeeklyDAI
 
